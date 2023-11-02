@@ -32,7 +32,7 @@ class _InboxScreenState extends State<InboxScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Inbox Screen"),
+        title: const Text("Inbox Screen"),
       ),
       body:ListView.builder(
           itemCount: userList.length,
@@ -44,8 +44,8 @@ class _InboxScreenState extends State<InboxScreen> {
               title: Text(userList[index]['name']),
               subtitle: Row(
                 children: [
-                  Icon(Icons.message),
-                  SizedBox(width: 10,),
+                  const Icon(Icons.message),
+                  const SizedBox(width: 10,),
                   Expanded(child: Text(userList[index]['last_message'],maxLines: 1,overflow: TextOverflow.ellipsis,)),
                 ],
               ),
